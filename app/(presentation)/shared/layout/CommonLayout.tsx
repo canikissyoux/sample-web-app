@@ -6,14 +6,10 @@ import { NavBar } from "../components"
 
 export function CommonLayout({ children }: { children: React.ReactNode }) {
     return (
-        <div className="flex h-screen">
-
-            <div className="flex flex-col flex-1 overflow-hidden">
-                {/* Navbar */}
+        <div className="flex h-screen w-full">
+            <div className="flex flex-col flex-1 min-w-0 overflow-hidden">
                 <NavBar />
-
-                {/* Main Content */}
-                <main className="flex-1 overflow-y-auto p-4 h-full">
+                <main className="flex-1 overflow-y-auto p-4 w-full">
                     {children}
                 </main>
             </div>

@@ -1,7 +1,9 @@
+import ProductList from "../../features/products/ProductList";
+
 export default function Home() {
     return (
-        <div>
-            Home
+        <div className="w-full">
+            <ProductList />
         </div>
     )
 }

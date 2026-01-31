@@ -5,6 +5,12 @@ export class BaseException extends Error {
     }
 }
 
+export class BadRequestException extends BaseException {
+    constructor() {
+        super(false, "ข้อมูลไม่ถูกต้อง", "BAD_REQUEST");
+    }
+}
+
 
 export class UserNotFoundException extends BaseException {
     constructor() {

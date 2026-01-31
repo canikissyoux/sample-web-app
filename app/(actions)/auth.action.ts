@@ -4,7 +4,7 @@
 import { cookies } from "next/headers"
 import { LoginInput } from "../domain/entity/auth/login-schema";
 import { handleActionError } from "../core/utils/error-handler";
-import { loginUseCase } from "../use-cases/auth/login-factory";
+import { loginUseCase } from "../use-cases/auth/auth-factory";
 
 export async function loginAction(formData: LoginInput) {
     try {

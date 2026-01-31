@@ -1,9 +1,9 @@
 'use client'
 import { useForm } from "react-hook-form"
-import { yupResolver } from "@hookform/resolvers/yup"
+import { zodResolver } from "@hookform/resolvers/zod"
 import { LoginInput, loginSchema } from "@/app/domain/entity/auth/login-schema"
-import { useLogin } from "./hook/use-login"
-import { useEffect } from "react"
+import { useLogin } from "../_hook/auth/use-login"
+import { useEffect, useState } from "react"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -22,7 +22,7 @@ export default function LoginForm() {
     const { handleLogin } = useLogin()
 
     const form = useForm<LoginInput>({
-        resolver: yupResolver(loginSchema),
+        resolver: zodResolver(loginSchema),
         mode: "onBlur",
         defaultValues: {
             email: "",
@@ -42,6 +42,14 @@ export default function LoginForm() {
             password: "Password1234!"
         })
     }, [reset])
+
+    const [isMounted, setIsMounted] = useState(false)
+
+    useEffect(() => {
+        setIsMounted(true)
+    }, [])
+
+    if (!isMounted) return null
 
     return (
         <div className="flex min-h-screen items-center justify-center bg-slate-50 px-4">

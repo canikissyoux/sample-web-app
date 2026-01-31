@@ -1,11 +1,22 @@
 import { create } from 'zustand'
+import { persist, createJSONStorage } from 'zustand/middleware'
+import { User } from '../../entity/user/user-schema'
 
 interface AuthState {
-    user: any | null
-    setUser: (user: any) => void
+    user: User | null;
+    setUser: (user: User) => void;
 }
 
-export const useAuthStore = create<AuthState>((set) => ({
-    user: null,
-    setUser: (user) => set({ user }),
-}))
+export const useAuthStore = create<AuthState>()(
+    persist(
+        (set) => ({
+            user: null,
+            setUser: (user: User) => set({ user }),
+            logout: () => set({ user: null }),
+        }),
+        {
+            name: 'auth-storage',
+            storage: createJSONStorage(() => localStorage),
+        }
+    )
+)

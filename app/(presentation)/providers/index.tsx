@@ -4,15 +4,12 @@
 import { ReactNode } from 'react'
 import { AuthProvider } from './AuthProvider'
 import QueryProvider from './QueryProvider'
-import { NavBarProvider } from './NavBarProvider'
 
 export function AppProvider({ children }: { children: ReactNode }) {
     return (
         <QueryProvider>
             <AuthProvider>
-                <NavBarProvider>
-                    {children}
-                </NavBarProvider>
+                {children}
             </AuthProvider>
         </QueryProvider>
     )

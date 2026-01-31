@@ -1,4 +1,5 @@
 'use client'
+import { logger } from '@/app/core/utils/logger';
 import { useAuthStore } from '@/app/domain/store/auth/auth.store'
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react'
 
@@ -11,18 +12,12 @@ interface AuthContextType {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-    const { setUser, user } = useAuthStore()
+    const { user, setUser } = useAuthStore()
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         async function initAuth() {
             try {
-                // ตัวอย่างการเช็ค Session จริงๆ
-                // const res = await fetch('/api/auth/me')
-                // if (res.ok) {
-                //    const data = await res.json()
-                //    setUser(data.user)
-                // }
             } catch (error) {
                 console.error("Auth init error:", error)
             } finally {
