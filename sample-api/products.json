@@ -1,0 +1,215 @@
+[
+    {
+        "id": 1,
+        "name": "พัดลมไอเย็น 12 ลิตร",
+        "category": "เครื่องใช้ไฟฟ้าในบ้าน",
+        "price": 2590,
+        "stock": 50,
+        "specs": "ประหยัดไฟเบอร์ 5, ปรับแรงลมได้ 3 ระดับ",
+        "cover_image": "https://images.unsplash.com/photo-1585338107529-13afc5f02586?q=80&w=800",
+        "image_list": [
+            "https://images.unsplash.com/photo-1591196702597-062a17206898?q=80&w=500",
+            "https://images.unsplash.com/photo-1544396821-4dd40b938ad3?q=80&w=500"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "หม้อหุงข้าวดิจิทัล 1.8 ลิตร",
+        "category": "เครื่องครัว",
+        "price": 1890,
+        "stock": 35,
+        "specs": "เคลือบสารกันติด, โปรแกรมหุงข้าว 8 แบบ",
+        "cover_image": "https://images.unsplash.com/photo-1544233726-9f1d2b27be8b?q=80&w=800",
+        "image_list": [
+            "https://images.unsplash.com/photo-1565120130276-dfbd9a7a3ad7?q=80&w=500"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "ไมโครเวฟระบบย่าง 23 ลิตร",
+        "category": "เครื่องครัว",
+        "price": 3200,
+        "stock": 20,
+        "specs": "กำลังไฟ 800W, อุ่นและย่างได้ในเครื่องเดียว",
+        "cover_image": "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?q=80&w=800",
+        "image_list": [
+            "https://images.unsplash.com/photo-1585659722982-7896d96738d8?q=80&w=500"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "เครื่องดูดฝุ่นไร้สาย",
+        "category": "เครื่องใช้ไฟฟ้าในบ้าน",
+        "price": 5900,
+        "stock": 15,
+        "specs": "แรงดูด 20000Pa, แบตเตอรี่ใช้งานนาน 45 นาที",
+        "cover_image": "https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=800",
+        "image_list": [
+            "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?q=80&w=500"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "ตู้เย็น 2 ประตู 7.4 คิว",
+        "category": "เครื่องใช้ไฟฟ้าในบ้าน",
+        "price": 8500,
+        "stock": 10,
+        "specs": "Inverter Compressor, ระบบละลายน้ำแข็งอัตโนมัติ",
+        "cover_image": "https://images.unsplash.com/photo-1571175432270-e837c59b45c3?q=80&w=800",
+        "image_list": [
+            "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=500"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "เครื่องฟอกอากาศ",
+        "category": "เครื่องใช้ไฟฟ้าในบ้าน",
+        "price": 4500,
+        "stock": 25,
+        "specs": "กรอง HEPA H13, กำจัดฝุ่น PM2.5 ได้ 99.9%",
+        "cover_image": "https://images.unsplash.com/photo-1585771724684-252702b64428?q=80&w=800",
+        "image_list": [
+            "https://images.unsplash.com/photo-1621360841013-c7683c659ec6?q=80&w=500"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "กาต้มน้ำไฟฟ้าสแตนเลส",
+        "category": "เครื่องครัว",
+        "price": 690,
+        "stock": 100,
+        "specs": "ความจุ 1.7 ลิตร, ตัดไฟอัตโนมัติเมื่อน้ำเดือด",
+        "cover_image": "https://images.unsplash.com/photo-1594212699903-ec8a3ecc50f6?q=80&w=800",
+        "image_list": []
+    },
+    {
+        "id": 8,
+        "name": "เตารีดไอน้ำแยกหม้อต้ม",
+        "category": "เครื่องใช้ไฟฟ้าในบ้าน",
+        "price": 12000,
+        "stock": 8,
+        "specs": "แรงดัน 7.5 บาร์, รีดเรียบเร็วไม่ต้องปรับอุณหภูมิ",
+        "cover_image": "https://images.unsplash.com/photo-1495556650867-99590cea3657?q=80&w=800",
+        "image_list": []
+    },
+    {
+        "id": 9,
+        "name": "เครื่องปั่นน้ำผลไม้",
+        "category": "เครื่องครัว",
+        "price": 2200,
+        "stock": 40,
+        "specs": "ใบมีดสแตนเลส 6 แฉก, โถปั่น BPA Free",
+        "cover_image": "https://images.unsplash.com/photo-1570275239925-4af0aa93a0dc?q=80&w=800",
+        "image_list": []
+    },
+    {
+        "id": 10,
+        "name": "หม้อทอดไร้น้ำมัน 5 ลิตร",
+        "category": "เครื่องครัว",
+        "price": 2990,
+        "stock": 60,
+        "specs": "ลดไขมันได้สูงสุด 80%, ตั้งเวลาได้ 60 นาที",
+        "cover_image": "https://images.unsplash.com/photo-1626074353765-517a681e40be?q=80&w=800",
+        "image_list": []
+    },
+    {
+        "id": 11,
+        "name": "เครื่องซักผ้าฝาหน้า 10 kg",
+        "category": "เครื่องใช้ไฟฟ้าในบ้าน",
+        "price": 15900,
+        "stock": 5,
+        "specs": "ระบบถนอมผ้าด้วยไอน้ำ, มอเตอร์แบบต่อตรง",
+        "cover_image": "https://images.unsplash.com/photo-1626806819282-2c1dc61a5e05?q=80&w=800",
+        "image_list": []
+    },
+    {
+        "id": 12,
+        "name": "ไดร์เป่าผมไออนิก 2200W",
+        "category": "ความงาม",
+        "price": 1500,
+        "stock": 45,
+        "specs": "ลดผมชี้ฟูด้วยประจุลบ, ปรับความร้อนได้ 3 ระดับ",
+        "cover_image": "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?q=80&w=800",
+        "image_list": []
+    },
+    {
+        "id": 13,
+        "name": "เครื่องปิ้งขนมปัง 2 แผ่น",
+        "category": "เครื่องครัว",
+        "price": 890,
+        "stock": 30,
+        "specs": "ปรับความเกรียมได้ 7 ระดับ, มีถาดรองเศษขนมปัง",
+        "cover_image": "https://images.unsplash.com/photo-1526401481357-0072d9299903?q=80&w=800",
+        "image_list": []
+    },
+    {
+        "id": 14,
+        "name": "เครื่องชงกาแฟอัตโนมัติ",
+        "category": "เครื่องครัว",
+        "price": 18500,
+        "stock": 12,
+        "specs": "บดเมล็ดในตัว, ทำเมนูคาปูชิโน่ได้ในปุ่มเดียว",
+        "cover_image": "https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?q=80&w=800",
+        "image_list": []
+    },
+    {
+        "id": 15,
+        "name": "ลำโพงบลูทูธกันน้ำ",
+        "category": "ความบันเทิง",
+        "price": 3500,
+        "stock": 22,
+        "specs": "มาตรฐาน IPX7, แบตเตอรี่อึด 20 ชั่วโมง",
+        "cover_image": "https://images.unsplash.com/photo-1608156639585-342c718337b7?q=80&w=800",
+        "image_list": []
+    },
+    {
+        "id": 16,
+        "name": "โทรทัศน์ Smart TV 55 นิ้ว",
+        "category": "ความบันเทิง",
+        "price": 13900,
+        "stock": 18,
+        "specs": "ความละเอียด 4K UHD, รองรับ Netflix และ YouTube",
+        "cover_image": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?q=80&w=800",
+        "image_list": []
+    },
+    {
+        "id": 17,
+        "name": "เครื่องทำน้ำอุ่น 4500W",
+        "category": "ห้องน้ำ",
+        "price": 3800,
+        "stock": 20,
+        "specs": "ระบบนิรภัย ELB, หม้อต้มทองแดงแท้",
+        "cover_image": "https://images.unsplash.com/photo-1584622781564-1d987f7333c1?q=80&w=800",
+        "image_list": []
+    },
+    {
+        "id": 18,
+        "name": "พัดลมตั้งพื้น 16 นิ้ว",
+        "category": "เครื่องใช้ไฟฟ้าในบ้าน",
+        "price": 1100,
+        "stock": 80,
+        "specs": "ใบพัดใส 3 ใบพัด, แข็งแรง ทนทาน",
+        "cover_image": "https://images.unsplash.com/photo-1618943930030-226e6807804a?q=80&w=800",
+        "image_list": []
+    },
+    {
+        "id": 19,
+        "name": "เตาแม่เหล็กไฟฟ้า",
+        "category": "เครื่องครัว",
+        "price": 1490,
+        "stock": 55,
+        "specs": "แถมหม้อสแตนเลส, ปรับกำลังไฟได้ 8 ระดับ",
+        "cover_image": "https://images.unsplash.com/photo-1584990344111-a396ecf663e2?q=80&w=800",
+        "image_list": []
+    },
+    {
+        "id": 20,
+        "name": "โคมไฟตั้งโต๊ะ LED",
+        "category": "เครื่องใช้ไฟฟ้าในบ้าน",
+        "price": 750,
+        "stock": 120,
+        "specs": "ปรับแสงได้ 3 โทนสี, มีช่องเสียบชาร์จ USB",
+        "cover_image": "https://images.unsplash.com/photo-1534073828943-f801091bb18c?q=80&w=800",
+        "image_list": []
+    }
+]
