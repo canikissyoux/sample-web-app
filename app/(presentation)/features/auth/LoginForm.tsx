@@ -19,7 +19,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Loader2, LockKeyhole } from "lucide-react"
 
 export default function LoginForm() {
-    const { handleLogin } = useLogin()
+    const { handleLogin, isLoading } = useLogin()
 
     const form = useForm<LoginInput>({
         resolver: zodResolver(loginSchema),
@@ -106,9 +106,9 @@ export default function LoginForm() {
                             <Button
                                 type="submit"
                                 className="w-full mt-6 bg-[#15173D] hover:bg-[#1A3263] transition-all"
-                                disabled={isSubmitting}
+                                disabled={isLoading}
                             >
-                                {isSubmitting ? (
+                                {isLoading ? (
                                     <>
                                         <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                                         กำลังตรวจสอบ...
