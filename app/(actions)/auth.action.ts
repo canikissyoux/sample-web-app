@@ -10,7 +10,7 @@ export async function loginAction(formData: LoginInput) {
     try {
         // 1. ตรวจสอบ Logic ผ่าน Use Case
         const user = await loginUseCase(formData);
-        const token = user.access_token;
+        const token = user.access_token ?? "";
 
         const cookieStore = await cookies();
 

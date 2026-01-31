@@ -1,62 +1,118 @@
 'use client'
-import { useForm, SubmitHandler } from "react-hook-form"
+import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { LoginInput, loginSchema } from "@/app/domain/entity/auth/login-schema"
 import { useLogin } from "./hook/use-login"
+import { useEffect } from "react"
 
+import { Button } from "@/components/ui/button"
+import {
+    Form,
+    FormControl,
+    FormField,
+    FormItem,
+    FormLabel,
+    FormMessage,
+} from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Loader2, LockKeyhole } from "lucide-react"
 
 export default function LoginForm() {
     const { handleLogin } = useLogin()
 
-    const {
-        register,
-        handleSubmit,
-        formState: { errors, isSubmitting },
-    } = useForm<LoginInput>({
+    const form = useForm<LoginInput>({
         resolver: yupResolver(loginSchema),
-        mode: "onBlur"
+        mode: "onBlur",
+        defaultValues: {
+            email: "",
+            password: ""
+        }
     })
 
-    const onSubmit: SubmitHandler<LoginInput> = async (data) => {
+    const { reset, handleSubmit, formState: { isSubmitting } } = form
+
+    const onSubmit = async (data: LoginInput) => {
         handleLogin(data)
     }
 
+    useEffect(() => {
+        reset({
+            email: "somchai.dev@example.com",
+            password: "Password1234!"
+        })
+    }, [reset])
+
     return (
-        <div className="mx-auto sm:max-w-lg relative h-screen">
-            <div className="p-6 rounded-lg w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <div className="text-center mb-4 text-xl font-bold">ลงชื่อเข้าใช้</div>
-                <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4">
-                    <div className="flex flex-col gap-1">
-                        <input
-                            type="text"
-                            className={`p-2 border outline-0 border-gray-300 rounded text-black ${errors.email ? 'border-2 border-red-500' : ''}`}
-                            placeholder="อีเมล"
-                            {...register('email')}
-                        />
-                        {/* แสดง Error Message ของ Email */}
-                        {errors.email && <span className="text-red-400 text-sm">{errors.email.message}</span>}
+        <div className="flex min-h-screen items-center justify-center bg-slate-50 px-4">
+            <Card className="w-full max-w-md shadow-lg">
+                <CardHeader className="space-y-1 flex flex-col items-center">
+                    <div className="bg-primary/10 p-3 rounded-full mb-2">
+                        <LockKeyhole className="h-6 w-6 text-primary" />
                     </div>
+                    <CardTitle className="text-2xl font-bold tracking-tight">ลงชื่อเข้าใช้</CardTitle>
+                </CardHeader>
+                <CardContent>
+                    <Form {...form}>
+                        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
 
-                    <div className="flex flex-col gap-1">
-                        <input
-                            type="password"
-                            className={`p-2 border outline-0 border-gray-300 rounded text-black ${errors.password ? 'border-2 border-red-500' : ''}`}
-                            placeholder="รหัสผ่าน"
-                            {...register('password')}
-                        />
-                        {/* แสดง Error Message ของ Password */}
-                        {errors.password && <span className="text-red-400 text-sm">{errors.password.message}</span>}
-                    </div>
+                            {/* Email Field */}
+                            <FormField
+                                control={form.control}
+                                name="email"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel>อีเมล</FormLabel>
+                                        <FormControl>
+                                            <Input
+                                                placeholder="example@mail.com"
+                                                className="focus-visible:ring-primary"
+                                                {...field}
+                                            />
+                                        </FormControl>
+                                        <FormMessage className="text-xs" />
+                                    </FormItem>
+                                )}
+                            />
 
-                    <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="bg-[#15173D] hover:bg-[#1A3263] text-white p-2 rounded transition-colors disabled:bg-gray-500"
-                    >
-                        {isSubmitting ? 'กำลังตรวจสอบ...' : 'เข้าสู่ระบบ'}
-                    </button>
-                </form>
-            </div>
+                            {/* Password Field */}
+                            <FormField
+                                control={form.control}
+                                name="password"
+                                render={({ field }) => (
+                                    <FormItem>
+                                        <FormLabel>รหัสผ่าน</FormLabel>
+                                        <FormControl>
+                                            <Input
+                                                type="password"
+                                                placeholder="••••••••"
+                                                className="focus-visible:ring-primary"
+                                                {...field}
+                                            />
+                                        </FormControl>
+                                        <FormMessage className="text-xs" />
+                                    </FormItem>
+                                )}
+                            />
+
+                            <Button
+                                type="submit"
+                                className="w-full mt-6 bg-[#15173D] hover:bg-[#1A3263] transition-all"
+                                disabled={isSubmitting}
+                            >
+                                {isSubmitting ? (
+                                    <>
+                                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                        กำลังตรวจสอบ...
+                                    </>
+                                ) : (
+                                    'เข้าสู่ระบบ'
+                                )}
+                            </Button>
+                        </form>
+                    </Form>
+                </CardContent>
+            </Card>
         </div>
     )
 }

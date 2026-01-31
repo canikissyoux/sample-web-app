@@ -14,6 +14,6 @@ export async function login(
     return {
         id: user.uid,
         email: user.email,
-        access_token: 'access_token'
+        access_token: user.access_token
     };
 }
