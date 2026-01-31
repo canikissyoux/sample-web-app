@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation"
 
 
 export const useLogout = () => {
-    const setUser = useAuthStore((state) => state.setUser)
+    const { emptyUser } = useAuthStore()
 
     const router = useRouter()
 
@@ -21,7 +21,7 @@ export const useLogout = () => {
             return null
         },
         onSuccess: () => {
-            setUser(null)
+            emptyUser()
             router.push("/")
             router.refresh()
         },

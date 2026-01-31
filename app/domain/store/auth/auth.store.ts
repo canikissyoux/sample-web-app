@@ -3,16 +3,20 @@ import { persist, createJSONStorage } from 'zustand/middleware'
 import { User } from '../../entity/user/user-schema'
 
 interface AuthState {
-    user: User | null;
+    user: User | undefined;
     setUser: (user: User) => void;
+    emptyUser: () => void
 }
 
 export const useAuthStore = create<AuthState>()(
     persist(
         (set) => ({
-            user: null,
+            user: undefined,
             setUser: (user: User) => set({ user }),
-            logout: () => set({ user: null }),
+            emptyUser: () => {
+                localStorage.clear();
+                return set({ user: undefined })
+            },
         }),
         {
             name: 'auth-storage',
