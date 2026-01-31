@@ -1,0 +1,16 @@
+[
+    {
+        "uid": "u-98725410",
+        "email": "somchai.dev@example.com",
+        "name": "Somchai Richards",
+        "password": "Password1234!",
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.sampletoken1_somchai_2026"
+    },
+    {
+        "uid": "u-11223344",
+        "email": "sarah.smith@testmail.io",
+        "name": "Sarah Smith",
+        "password": "mypassword99",
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.sampletoken2_sarah_2026"
+    }
+]
