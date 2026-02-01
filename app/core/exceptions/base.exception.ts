@@ -20,7 +20,7 @@ export class UserNotFoundException extends BaseException {
 
 export class UnauthorizedException extends BaseException {
     constructor() {
-        super(false, "เข้าสู่ระบบไม่สําเร็จกรุณาตรวจสอบอีเมลและรหัสผ่านอีกครั้ง", "AUTH_UNAUTHORIZED");
+        super(false, "อีเมลหรือรหัสผ่านไม่ถูกต้อง", "AUTH_UNAUTHORIZED");
     }
 }
 

@@ -19,7 +19,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Loader2, LockKeyhole } from "lucide-react"
 
 export default function LoginForm() {
-    const { handleLogin, isLoading } = useLogin()
+    const { handleLogin, isLoading, error } = useLogin()
 
     const form = useForm<LoginInput>({
         resolver: zodResolver(loginSchema),
@@ -61,6 +61,12 @@ export default function LoginForm() {
                     <CardTitle className="text-2xl font-bold tracking-tight">ลงชื่อเข้าใช้</CardTitle>
                 </CardHeader>
                 <CardContent>
+                    {error && (
+                        <div className="mb-4 flex items-center gap-2 p-3 text-sm font-medium text-destructive bg-destructive/10 border border-destructive/20 rounded-md">
+                            <span className="w-1.5 h-1.5 rounded-full bg-destructive animate-pulse" />
+                            {error.message || "อีเมลหรือรหัสผ่านไม่ถูกต้อง"}
+                        </div>
+                    )}
                     <Form {...form}>
                         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
 
@@ -120,6 +126,7 @@ export default function LoginForm() {
                         </form>
                     </Form>
                 </CardContent>
+
             </Card>
         </div>
     )

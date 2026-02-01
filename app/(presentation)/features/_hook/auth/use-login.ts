@@ -1,5 +1,6 @@
 // presentation/hooks/use-login.ts
 import { loginAction } from "@/app/(actions)/auth.action"
+import { logger } from "@/app/core/utils/logger"
 import { LoginInput } from "@/app/domain/entity/auth/login-schema"
 import { useAuthStore } from "@/app/domain/store/auth/auth.store"
 import { useMutation } from "@tanstack/react-query"
@@ -27,8 +28,7 @@ export const useLogin = () => {
             router.refresh()
         },
         onError: (error: any) => {
-
-            console.error(error.message)
+            logger.debug(error.message, "error")
         }
     })
 
